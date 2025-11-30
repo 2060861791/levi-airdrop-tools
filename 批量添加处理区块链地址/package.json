@@ -1,0 +1,37 @@
+{
+  "name": "playwright-practice",
+  "version": "1.0.0",
+  "description": "Playwright自动化测试练习项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "ui": "playwright test --ui",
+    "debug": "playwright test --debug",
+    "codegen": "playwright codegen",
+    "install:browsers": "playwright install",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write .",
+    "mask": "node mask-sensitive-data.js"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0"
+  }
+}

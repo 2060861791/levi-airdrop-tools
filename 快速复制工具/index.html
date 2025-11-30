@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>账号管理表格</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+            <button class="edit-btn" id="editBtn">编辑</button>
+                <button class="import-btn" id="importBtn">导入CSV</button>
+                <input type="file" id="fileInput" class="file-input" accept=".csv">
+            </div>
+            
+            <div class="header-right">
+                <span class="group-label" id="groupLabel">空投30-空投35</span>
+                <button class="page-btn" id="prevBtn">&lt;</button>
+                <span class="page-info" id="pageInfo">第 1 页 / 共 1 页</span>
+                <button class="page-btn" id="nextBtn">&gt;</button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="accountTable">
+                <thead>
+                    <tr>
+                        <th class="x-account">X用户名</th>
+                        <th class="x-account">X密码</th>
+                        <th class="x-account">X-2FA</th>
+                        <th class="tg-account">TG电话</th>
+                        <th class="tg-account">TG密码</th>
+                        <th class="dc-account">DC邮箱</th>
+                        <th class="dc-account">DC密码</th>
+                        <th class="dc-account">DC-2FA</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- 表格内容将通过JavaScript生成 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">复制成功！</div>
+
+    <script src="js/account-manager.js"></script>
+</body>
+</html>

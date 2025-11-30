@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2FA 解析器</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="brandbar">
+            <div class="brand-title">2FA 解析器</div>
+            <div class="brand-sub">小而美 · 即贴即用 · 实时验证码</div>
+        </div>
+        <div class="tfa-app">
+            <div class="tfa-left">
+                <div class="tfa-left-header">
+                    <span>在左侧粘贴 2FA 秘钥或 otpauth:// 链接（每行一个）</span>
+                    <div class="tfa-actions">
+                        <button class="edit-btn" id="clearBtn">清空</button>
+                        <button class="import-btn" id="demoBtn">示例</button>
+                    </div>
+                </div>
+                <textarea id="secretInput" class="tfa-textarea" placeholder="支持示例：\nJBSWY3DPEHPK3PXP\notpauth://totp/Example:demo?secret=JBSWY3DPEHPK3PXP&issuer=Example&algorithm=SHA1&digits=6&period=30"></textarea>
+            </div>
+            <div class="tfa-right">
+                <div class="tfa-right-header">
+                    <span>实时验证码</span>
+                    <span id="serverTime" class="server-time">--:--:--</span>
+                </div>
+                <div id="codeList" class="tfa-list"></div>
+            </div>
+        </div>
+        <div class="footerbar">Made with ❤ for productivity</div>
+    </div>
+
+    <div class="toast" id="toast">复制成功！</div>
+
+    <script src="js/account-manager.js"></script>
+</body>
+</html>
